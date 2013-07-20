@@ -14,11 +14,10 @@ public class HardtoBeatMe extends EtyllicaFrame {
 	public static void main(String[] args){
 		HardtoBeatMe game = new HardtoBeatMe();
 		game.setTitle("Hard To Beat Me");
-		game.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		game.init();
 		game.setVisible(true);
 		
-		MultimediaLoader.getInstancia().setSoundLibrary(LibraryJOAL.class);
+		MultimediaLoader.getInstance().setSoundLibrary(LibraryJOAL.class);
 	}
 	
 	@Override

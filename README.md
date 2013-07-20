@@ -1,5 +1,5 @@
 ===============
-Hard to beat Me
+Hard To Beat Me
 ===============
 
-An original game using Etyllica Engine made in Dumativa at GGJ 2012.
+An original game using Etyllica Engine made in Dumativa at Global Game Jam 2013.

@@ -173,8 +173,8 @@ public class HeartGame extends Application{
 		loading = 100;
 	}
 
-
-	protected void timeUpdate(){
+	@Override
+	public void timeUpdate(){
 		
 		moveAll();
 		
@@ -446,8 +446,8 @@ public class HeartGame extends Application{
 		
 		g.setFont(g.getFont().deriveFont(22f));
 		g.setColor(Color.WHITE);
-		g.escreveSombra(500,65,"POINTS:");
-		g.escreveSombra(600,65,getPoints());
+		g.drawShadow(500,65,"POINTS:");
+		g.drawShadow(600,65,getPoints());
 
 	}
 	

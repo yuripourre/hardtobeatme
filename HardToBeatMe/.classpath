@@ -14,6 +14,7 @@
 	<classpathentry kind="lib" path="lib/joal-natives-macosx-universal.jar"/>
 	<classpathentry kind="lib" path="lib/joal-natives-windows-amd64.jar"/>
 	<classpathentry kind="lib" path="lib/joal-natives-windows-i586.jar"/>
-	<classpathentry kind="lib" path="lib/etyllica-1.3.5.jar"/>
+	<classpathentry kind="lib" path="lib/etyllica-1.6-sound.jar"/>
+	<classpathentry kind="lib" path="lib/etyllica-1.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

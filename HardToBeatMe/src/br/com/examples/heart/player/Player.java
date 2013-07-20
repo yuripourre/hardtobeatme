@@ -4,18 +4,18 @@ import java.awt.Color;
 
 import br.com.etyllica.core.DrawableComponent;
 import br.com.etyllica.core.video.Grafico;
-import br.com.etyllica.layer.AnimatedImageLayer;
+import br.com.etyllica.layer.AnimatedLayer;
 
 public class Player implements DrawableComponent{
 
 	private PlayerAction action = PlayerAction.RUN;
 	
-	private AnimatedImageLayer layer;
+	private AnimatedLayer layer;
 	
 	public Player(int x, int y){
 		super();
 		
-		layer = new AnimatedImageLayer(x,y,114,144,"player.png");
+		layer = new AnimatedLayer(x,y,114,144,"player.png");
 		layer.setAnimaEmX(true);
 		layer.setNumeroFrames(12);
 		layer.anima();
@@ -50,7 +50,7 @@ public class Player implements DrawableComponent{
 		
 	}
 	
-	public AnimatedImageLayer getCamada(){
+	public AnimatedLayer getCamada(){
 		return layer;
 	}
 
