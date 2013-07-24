@@ -17,7 +17,7 @@ public class Player implements DrawableComponent{
 		
 		layer = new AnimatedLayer(x,y,114,144,"player.png");
 		layer.setAnimaEmX(true);
-		layer.setNumeroFrames(12);
+		layer.setFrames(12);
 		layer.anima();
 		
 	}

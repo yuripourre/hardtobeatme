@@ -66,17 +66,17 @@ public class Instructions extends HeartApplication{
 		
 		g.setColor(Color.WHITE);
 		
-		g.escreveSombraX(50, "Instructions");
+		g.drawStringShadowX(50, "Instructions");
 		
 		g.setFont(g.getFont().deriveFont(28f).deriveFont(Font.BOLD));		
 		
-		g.escreveSombraX(110, "Use Q,A,P, and L keys to beat your heart");
+		g.drawStringShadowX(110, "Use Q,A,P, and L keys to beat your heart");
 		
 		
-		g.escreveSombraX(180, "Q beats the Upper Left part of Heart.");
-		g.escreveSombraX(220, "A beats the Lower Left part of Heart.");
-		g.escreveSombraX(260, "P beats the Upper Right part of Heart.");
-		g.escreveSombraX(300, "L beats the Lower Right part of Heart.");
+		g.drawStringShadowX(180, "Q beats the Upper Left part of Heart.");
+		g.drawStringShadowX(220, "A beats the Lower Left part of Heart.");
+		g.drawStringShadowX(260, "P beats the Upper Right part of Heart.");
+		g.drawStringShadowX(300, "L beats the Lower Right part of Heart.");
 		
 	}
 

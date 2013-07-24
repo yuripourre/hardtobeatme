@@ -25,10 +25,10 @@ public class LoadingGame extends GenericLoadApplication{
 	public void draw(Grafico g) {
 		
 		g.setColor(Color.WHITE);
-		g.escreveSombraX(320, phrase);
+		g.drawStringShadowX(320, phrase);
 
 		g.drawRect(rectX, rectY, rectW, rectH);
-		g.fillRect(rectX+2, rectY+2, ((rectW*fill)/100)-3, rectH-3);
+		g.fillRect(rectX+2, rectY+2, (int)((rectW*fill)/100)-3, rectH-3);
 		
 		g.drawStringShadow(rectX, rectY, rectW, rectH, percent, Color.BLACK);
 		

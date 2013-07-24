@@ -66,11 +66,11 @@ public class Credits extends HeartApplication{
 		
 		g.setColor(Color.WHITE);
 		
-		g.escreveSombraX(50, "Credits");
+		g.drawStringShadowX(50, "Credits");
 		
-		g.escreveSombraX(250, "Pedro Viriato - Art");
-		g.escreveSombraX(300, "Rafael Bastos - Sounds");
-		g.escreveSombraX(350, "Yuri Pourre - Programming");
+		g.drawStringShadowX(250, "Pedro Viriato - Art");
+		g.drawStringShadowX(300, "Rafael Bastos - Sounds");
+		g.drawStringShadowX(350, "Yuri Pourre - Programming");
 		
 			
 	}

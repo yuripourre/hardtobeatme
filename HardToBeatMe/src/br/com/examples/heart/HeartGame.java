@@ -124,31 +124,31 @@ public class HeartGame extends Application{
 		
 		performPerfect = new Effect(effectsX, effectsY, 240, 65);
 		performPerfect.setPath("fx/perfect.png");
-		performPerfect.setNumeroFrames(7);
+		performPerfect.setFrames(7);
 		//performPerfect.anima();
 		performPerfect.setVisible(false);
 		
 		performGreat = new Effect(effectsX, effectsY, 240, 65);
 		performGreat.setPath("fx/great.png");
-		performGreat.setNumeroFrames(7);
+		performGreat.setFrames(7);
 		//performGreat.anima();
 		performGreat.setVisible(false);
 		
 		performGood = new Effect(effectsX, effectsY, 240, 65);
 		performGood.setPath("fx/good.png");
-		performGood.setNumeroFrames(7);
+		performGood.setFrames(7);
 		//performGood.anima();
 		performGood.setVisible(false);
 
 		performMiss = new Effect(effectsX, effectsY, 240, 65);
 		performMiss.setPath("fx/miss.png");
-		performMiss.setNumeroFrames(7);
+		performMiss.setFrames(7);
 		//performMiss.anima();
 		performMiss.setVisible(false);
 		
 		stars = new Effect(160, 250, 100, 60);
 		stars.setPath("fx/stars.png");
-		stars.setNumeroFrames(7);
+		stars.setFrames(7);
 		stars.setVisible(false);
 		
 		loadingPhrase = "Loading Obstacles...";

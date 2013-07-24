@@ -17,11 +17,12 @@ public class HardtoBeatMe extends EtyllicaFrame {
 		game.init();
 		game.setVisible(true);
 		
-		MultimediaLoader.getInstance().setSoundLibrary(LibraryJOAL.class);
 	}
 	
 	@Override
 	public void startGame(){
+		
+		MultimediaLoader.getInstance().setSoundLibrary(LibraryJOAL.class);
 
 		setMainApplication(new HeartMenu(w, h));
 		
