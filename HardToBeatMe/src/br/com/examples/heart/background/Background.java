@@ -1,10 +1,10 @@
 package br.com.examples.heart.background;
 
-import br.com.etyllica.core.DrawableComponent;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.Drawable;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
-public class Background implements DrawableComponent{
+public class Background implements Drawable{
 
 	private ImageLayer sun;
 	
@@ -41,7 +41,7 @@ public class Background implements DrawableComponent{
 	}
 	
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 
 		sun.draw(g);
 	

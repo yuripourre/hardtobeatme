@@ -3,11 +3,11 @@ package br.com.examples.heart;
 import java.awt.Color;
 import java.awt.Font;
 
-import br.com.etyllica.core.event.GUIAction;
+import br.com.etyllica.core.event.Action;
 import br.com.etyllica.core.event.GUIEvent;
-import br.com.etyllica.core.event.KeyboardEvent;
+import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.gui.button.RoundButton;
 import br.com.etyllica.gui.label.TextLabel;
 import br.com.etyllica.layer.ImageLayer;
@@ -31,7 +31,7 @@ public class Credits extends HeartApplication{
 		backButton = new RoundButton(40,500,80,80);
 		backButton.setLabel(new TextLabel("Back"));
 		
-		backButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new GUIAction(this, "back"));
+		backButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new Action(this, "back"));
 		add(backButton);
 		
 		loading = 100;
@@ -53,7 +53,7 @@ public class Credits extends HeartApplication{
 	}
 
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 		
 		background.draw(g);
 		
@@ -76,7 +76,7 @@ public class Credits extends HeartApplication{
 	}
 
 	@Override
-	public GUIEvent updateKeyboard(KeyboardEvent arg0) {
+	public GUIEvent updateKeyboard(KeyEvent event) {
 		// TODO Auto-generated method stub
 		return GUIEvent.NONE;
 	}

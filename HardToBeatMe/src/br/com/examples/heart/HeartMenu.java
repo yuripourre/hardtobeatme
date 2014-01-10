@@ -1,10 +1,11 @@
 package br.com.examples.heart;
 
-import br.com.etyllica.core.event.GUIAction;
+
+import br.com.etyllica.core.event.Action;
 import br.com.etyllica.core.event.GUIEvent;
-import br.com.etyllica.core.event.KeyboardEvent;
+import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.gui.button.RoundCornerButton;
 import br.com.etyllica.gui.label.TextLabel;
 import br.com.etyllica.layer.ImageLayer;
@@ -36,19 +37,19 @@ public class HeartMenu extends HeartApplication{
 		playButton = new RoundCornerButton(200,offsetY,400,60);
 		playButton.setLabel(new TextLabel("Play Game"));
 		
-		playButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new GUIAction(this, "play"));
+		playButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new Action(this, "play"));
 		add(playButton);
 		
 		
 		instructionsButton = new RoundCornerButton(200,offsetY+80,400,60);
 		instructionsButton.setLabel(new TextLabel("Instructions"));
-		instructionsButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new GUIAction(this, "instructions"));
+		instructionsButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new Action(this, "instructions"));
 		
 		add(instructionsButton);
 		
 		creditsButton = new RoundCornerButton(200,offsetY+160,400,60);
 		creditsButton.setLabel(new TextLabel("Credits"));
-		creditsButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new GUIAction(this, "credits"));
+		creditsButton.addAction(GUIEvent.MOUSE_LEFT_BUTTON_DOWN, new Action(this, "credits"));
 		add(creditsButton);
 		
 		loading = 100;
@@ -86,15 +87,15 @@ public class HeartMenu extends HeartApplication{
 	}
 
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 		
 		background.draw(g);		
 		
 	}
 
 	@Override
-	public GUIEvent updateKeyboard(KeyboardEvent arg0) {
-		// TODO Auto-generated method stub
+	public GUIEvent updateKeyboard(KeyEvent event) {
+
 		return GUIEvent.NONE;
 	}
 	

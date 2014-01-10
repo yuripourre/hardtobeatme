@@ -3,11 +3,11 @@ package br.com.examples.heart.background;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.etyllica.core.DrawableComponent;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.Drawable;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
-public class Street implements DrawableComponent{
+public class Street implements Drawable{
 
 	private int speed = 8;
 	
@@ -24,7 +24,7 @@ public class Street implements DrawableComponent{
 	}
 	
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 
 		for(StreetTile tile: streetTiles){
 			tile.draw(g);

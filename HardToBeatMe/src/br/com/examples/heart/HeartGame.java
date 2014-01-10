@@ -4,16 +4,15 @@ import java.awt.Color;
 import java.util.List;
 import java.util.Random;
 
-import br.com.etyllica.core.application.Application;
+import sound.model.Music;
+import sound.model.Sound;
+import br.com.etyllica.context.Application;
 import br.com.etyllica.core.event.GUIEvent;
-import br.com.etyllica.core.event.KeyboardEvent;
+import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.event.Tecla;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.effects.Effect;
 import br.com.etyllica.layer.ImageLayer;
-import br.com.etyllica.multimedia.Music;
-import br.com.etyllica.multimedia.Sound;
 import br.com.examples.heart.background.Background;
 import br.com.examples.heart.beats.Heart;
 import br.com.examples.heart.beats.HeartBox;
@@ -166,7 +165,7 @@ public class HeartGame extends Application{
 
 		loadingPhrase = "Loading Music...";
 
-		music.playStream();
+		music.play();
 
 		updateAtFixedRate(35);
 
@@ -174,18 +173,18 @@ public class HeartGame extends Application{
 	}
 
 	@Override
-	public void timeUpdate(){
+	public void timeUpdate(long now){
 		
 		moveAll();
+				
+		performPerfect.nextFrame();
+		performGreat.nextFrame();
+		performGood.nextFrame();
+		performMiss.nextFrame();
 		
-		performPerfect.preAnima();
-		performGreat.preAnima();
-		performGood.preAnima();
-		performMiss.preAnima();
+		stars.nextFrame();
 		
-		stars.preAnima();
-		
-		player.getCamada().preAnima();
+		player.getCamada().nextFrame();
 		
 		List<Heart> hearts = obstacle.getHeartSequence();
 
@@ -363,48 +362,48 @@ public class HeartGame extends Application{
 
 
 	@Override
-	public GUIEvent updateKeyboard(KeyboardEvent event){
+	public GUIEvent updateKeyboard(KeyEvent event){
 
-		if(event.getPressed(Tecla.TSK_Q)){
+		if(event.isKeyDown(KeyEvent.TSK_Q)){
 			box.pressUpperLeft();
 			markq.setVisible(true);
 
 			//beat1.play();
 
-		}else if(event.getReleased(Tecla.TSK_Q)){
+		}else if(event.isKeyUp(KeyEvent.TSK_Q)){
 			
 			box.unpressUpperLeft();
 			markq.setVisible(false);
 		}
 
-		if(event.getPressed(Tecla.TSK_A)){
+		if(event.isKeyDown(KeyEvent.TSK_A)){
 			box.pressLowerLeft();
 			marka.setVisible(true);
 			
 			//beat2.play();
-		}else if(event.getReleased(Tecla.TSK_A)){
+		}else if(event.isKeyUp(KeyEvent.TSK_A)){
 			box.unpressLowerLeft();
 			marka.setVisible(false);
 		}
 
-		if(event.getPressed(Tecla.TSK_P)){
+		if(event.isKeyDown(KeyEvent.TSK_P)){
 			box.pressUpperRight();
 			markp.setVisible(true);
 			
 			//beat1.play();
 
-		}else if(event.getReleased(Tecla.TSK_P)){
+		}else if(event.isKeyUp(KeyEvent.TSK_P)){
 			box.unpressUpperRight();
 			markp.setVisible(false);
 		}
 
-		if(event.getPressed(Tecla.TSK_L)){
+		if(event.isKeyDown(KeyEvent.TSK_L)){
 			box.pressLowerRight();
 			markl.setVisible(true);
 			
 			//beat2.play();
 
-		}else if(event.getReleased(Tecla.TSK_L)){
+		}else if(event.isKeyUp(KeyEvent.TSK_L)){
 			box.unpressLowerRight();
 			markl.setVisible(false);
 		}
@@ -415,7 +414,7 @@ public class HeartGame extends Application{
 	}
 
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 
 		background.draw(g);
 		

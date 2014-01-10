@@ -1,8 +1,8 @@
 package br.com.examples.heart;
 import java.awt.Color;
 
-import br.com.etyllica.core.application.GenericLoadApplication;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.context.load.GenericLoadApplication;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
 
@@ -22,7 +22,7 @@ public class LoadingGame extends GenericLoadApplication{
 	private int rectH = 32;
 	
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 		
 		g.setColor(Color.WHITE);
 		g.drawStringShadowX(320, phrase);

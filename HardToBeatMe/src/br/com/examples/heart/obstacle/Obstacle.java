@@ -3,12 +3,12 @@ package br.com.examples.heart.obstacle;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.etyllica.core.DrawableComponent;
+import br.com.etyllica.core.Drawable;
 import br.com.etyllica.layer.Layer;
 import br.com.examples.heart.beats.Heart;
 import br.com.examples.heart.player.PlayerAction;
 
-public abstract class Obstacle extends Layer implements DrawableComponent{
+public abstract class Obstacle extends Layer implements Drawable{
 
 	protected int difficult = 0;
 	

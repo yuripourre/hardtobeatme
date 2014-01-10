@@ -1,6 +1,6 @@
 import sound.paulscode.libraries.LibraryJOAL;
 import br.com.etyllica.EtyllicaFrame;
-import br.com.etyllica.core.loader.MultimediaLoader;
+import sound.MultimediaLoader;
 import br.com.examples.heart.HeartMenu;
 
 public class HardtoBeatMe extends EtyllicaFrame {
@@ -17,13 +17,15 @@ public class HardtoBeatMe extends EtyllicaFrame {
 		game.init();
 		game.setVisible(true);
 		
+		game.addLoader(MultimediaLoader.getInstance());
+		
+		MultimediaLoader.getInstance().setSoundLibrary(LibraryJOAL.class);
+		
 	}
 	
 	@Override
 	public void startGame(){
 		
-		MultimediaLoader.getInstance().setSoundLibrary(LibraryJOAL.class);
-
 		setMainApplication(new HeartMenu(w, h));
 		
 	}

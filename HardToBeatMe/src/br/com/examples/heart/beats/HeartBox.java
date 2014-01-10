@@ -1,10 +1,10 @@
 package br.com.examples.heart.beats;
 
-import br.com.etyllica.core.DrawableComponent;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.Drawable;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.layer.Layer;
 
-public class HeartBox extends Layer implements DrawableComponent{
+public class HeartBox extends Layer implements Drawable{
 
 	private int points = 0;
 
@@ -25,7 +25,7 @@ public class HeartBox extends Layer implements DrawableComponent{
 	}
 
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 
 		/*g.setColor(Color.WHITE);
 		g.drawRect(x, y, w, h);

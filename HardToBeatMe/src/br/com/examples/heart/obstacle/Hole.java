@@ -1,6 +1,6 @@
 package br.com.examples.heart.obstacle;
 
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 import br.com.examples.heart.beats.Heart;
 import br.com.examples.heart.player.PlayerAction;
@@ -48,7 +48,7 @@ public class Hole extends Obstacle{
 	}
 	
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 		
 		layer.draw(g);
 		

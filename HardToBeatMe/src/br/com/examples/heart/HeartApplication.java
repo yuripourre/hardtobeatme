@@ -1,6 +1,6 @@
 package br.com.examples.heart;
 
-import br.com.etyllica.core.application.Application;
+import br.com.etyllica.context.Application;
 
 public abstract class HeartApplication extends Application{
 

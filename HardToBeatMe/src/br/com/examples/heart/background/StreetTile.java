@@ -2,18 +2,18 @@ package br.com.examples.heart.background;
 
 import java.awt.Color;
 
-import br.com.etyllica.core.DrawableComponent;
-import br.com.etyllica.core.video.Grafico;
+import br.com.etyllica.core.Drawable;
+import br.com.etyllica.core.video.Graphic;
 import br.com.etyllica.layer.Layer;
 
-public class StreetTile extends Layer implements DrawableComponent{
+public class StreetTile extends Layer implements Drawable{
 
 	public StreetTile(int x, int y){
 		super(x, y, 160, 320);
 	}
 	
 	@Override
-	public void draw(Grafico g) {
+	public void draw(Graphic g) {
 		
 		int streetH = 160;
 		g.setAlpha(60);
