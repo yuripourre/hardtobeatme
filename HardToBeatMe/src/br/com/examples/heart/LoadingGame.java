@@ -2,7 +2,7 @@ package br.com.examples.heart;
 import java.awt.Color;
 
 import br.com.etyllica.context.load.GenericLoadApplication;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
 

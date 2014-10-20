@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
-public class Street implements Drawable{
+public class Street implements Drawable {
 
 	private int speed = 8;
 	

@@ -3,10 +3,10 @@ package br.com.examples.heart.player;
 import java.awt.Color;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.AnimatedLayer;
 
-public class Player implements Drawable{
+public class Player implements Drawable {
 
 	private PlayerAction action = PlayerAction.RUN;
 	
@@ -16,7 +16,7 @@ public class Player implements Drawable{
 		super();
 		
 		layer = new AnimatedLayer(x,y,114,144,"player.png");
-		layer.setAnimaEmX(true);
+		layer.setAnimateHorizontally(true);
 		layer.setFrames(12);
 		layer.animate();
 		

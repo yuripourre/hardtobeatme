@@ -4,10 +4,10 @@ import java.awt.Color;
 import java.util.Random;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
-public class Heart implements Drawable{
+public class Heart implements Drawable {
 
 	private Performance performance = Performance.FAR;
 	private HeartArea area;

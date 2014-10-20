@@ -1,10 +1,10 @@
 package br.com.examples.heart.beats;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.Layer;
 
-public class HeartBox extends Layer implements Drawable{
+public class HeartBox extends Layer implements Drawable {
 
 	private int points = 0;
 

@@ -7,12 +7,12 @@ import br.com.etyllica.core.event.Action;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.gui.button.RoundButton;
 import br.com.etyllica.gui.label.TextLabel;
 import br.com.etyllica.layer.ImageLayer;
 
-public class Credits extends HeartApplication{
+public class Credits extends HeartApplication {
 
 	private RoundButton backButton;
 	
@@ -25,7 +25,7 @@ public class Credits extends HeartApplication{
 	@Override
 	public void load() {
 		
-		loadingPhrase = "Loading Background...";
+		loadingInfo = "Loading Background...";
 		background = new ImageLayer("splash.png");
 		
 		backButton = new RoundButton(40,500,80,80);
@@ -37,8 +37,8 @@ public class Credits extends HeartApplication{
 		loading = 100;
 	}
 
-	public void back(){
-		returnApplication = new HeartMenu(w, h);
+	public void back() {
+		nextApplication = new HeartMenu(w, h);
 		changeScene = true;
 	}
 	

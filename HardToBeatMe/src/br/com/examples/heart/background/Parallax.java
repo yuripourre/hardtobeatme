@@ -1,10 +1,10 @@
 package br.com.examples.heart.background;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
-public class Parallax implements Drawable{
+public class Parallax implements Drawable {
 
 	private ImageLayer camada1;
 	private ImageLayer camada2;
@@ -13,11 +13,11 @@ public class Parallax implements Drawable{
 	
 	private int backgroundW = 800;
 	
-	public Parallax(String path){
+	public Parallax(String path) {
 		this(0, path);
 	}
 	
-	public Parallax(int y, String path){
+	public Parallax(int y, String path) {
 		super();
 		
 		camada1 = new ImageLayer(0,y,path);

@@ -1,6 +1,6 @@
 package br.com.examples.heart.obstacle;
 
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 import br.com.examples.heart.beats.Heart;
 import br.com.examples.heart.player.PlayerAction;

@@ -1,10 +1,10 @@
 package br.com.examples.heart.background;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.ImageLayer;
 
-public class Background implements Drawable{
+public class Background implements Drawable {
 
 	private ImageLayer sun;
 	

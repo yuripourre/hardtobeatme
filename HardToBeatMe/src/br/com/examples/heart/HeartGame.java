@@ -10,7 +10,7 @@ import br.com.etyllica.context.Application;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.effects.Effect;
 import br.com.etyllica.layer.ImageLayer;
 import br.com.examples.heart.background.Background;
@@ -23,7 +23,7 @@ import br.com.examples.heart.obstacle.Obstacle;
 import br.com.examples.heart.player.Player;
 import br.com.examples.heart.player.PlayerAction;
 
-public class HeartGame extends Application{
+public class HeartGame extends Application {
 	
 	private Sound beat1;
 	private Sound beat2;
@@ -55,13 +55,8 @@ public class HeartGame extends Application{
 	//UpperBar
 	private HeartBox box;
 
-	//private Street street;
-
 	private Background background;
 	
-	//Pass to background
-	
-
 	private final int gameSpeed = 8;
 	
 	private int nextHeart = 0;
@@ -84,15 +79,15 @@ public class HeartGame extends Application{
 	@Override
 	public void load() {
 
-		loadingPhrase = "Loading Player...";
+		loadingInfo = "Loading Player...";
 		player = new Player(px, py);
 		
 		loading = 5;
-		loadingPhrase = "Loading Background...";
+		loadingInfo = "Loading Background...";
 		background = new Background();
 		
 
-		loadingPhrase = "Loading Bar...";
+		loadingInfo = "Loading Bar...";
 		bar = new ImageLayer(0,60,"bar.png");
 		
 		marker = new ImageLayer(130,53,"marcador.png");
@@ -110,13 +105,13 @@ public class HeartGame extends Application{
 		markl.setVisible(false);
 
 		
-		loadingPhrase = "Loading Interface...";
+		loadingInfo = "Loading Interface...";
 		loading = 10;
 		box = new HeartBox(130,50);
 
 		
 		loading = 20;
-		loadingPhrase = "Loading Effects...";
+		loadingInfo = "Loading Effects...";
 		
 		int effectsX = 110;
 		int effectsY = 90;
@@ -150,20 +145,20 @@ public class HeartGame extends Application{
 		stars.setFrames(7);
 		stars.setVisible(false);
 		
-		loadingPhrase = "Loading Obstacles...";
+		loadingInfo = "Loading Obstacles...";
 		loading = 50;
 
 		obstacle = generateNewObstacle();
 		
 
 		loading = 80;
-		loadingPhrase = "Loading Sounds...";
+		loadingInfo = "Loading Sounds...";
 
 		//beat1 = new Sound("beat1.wav");
 		//beat2 = new Sound("beat2.wav");
 		wrong = new Sound("wrong.wav");
 
-		loadingPhrase = "Loading Music...";
+		loadingInfo = "Loading Music...";
 
 		music.play();
 

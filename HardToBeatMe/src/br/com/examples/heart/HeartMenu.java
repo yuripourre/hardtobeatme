@@ -5,7 +5,7 @@ import br.com.etyllica.core.event.Action;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.gui.button.RoundCornerButton;
 import br.com.etyllica.gui.label.TextLabel;
 import br.com.etyllica.layer.ImageLayer;
@@ -14,7 +14,6 @@ public class HeartMenu extends HeartApplication{
 	
 	public HeartMenu(int largura, int altura){
 		super(largura, altura);
-		
 	}
 	
 	private ImageLayer background;
@@ -28,7 +27,7 @@ public class HeartMenu extends HeartApplication{
 		
 		background = new ImageLayer("splash.png");
 		
-		loadingPhrase = "Loading Background...";
+		loadingInfo = "Loading Background...";
 		loading = 20;
 		
 		
@@ -55,18 +54,18 @@ public class HeartMenu extends HeartApplication{
 		loading = 100;
 	}
 	
-	public void play(){
-		returnApplication = new HeartGame(w, h);
+	public void play() {
+		nextApplication = new HeartGame(w, h);
 		changeScene = true;
 	}
 	
-	public void instructions(){
-		returnApplication = new Instructions(w, h);
+	public void instructions() {
+		nextApplication = new Instructions(w, h);
 		changeScene = true;
 	}
 	
-	public void credits(){
-		returnApplication = new Credits(w, h);
+	public void credits() {
+		nextApplication = new Credits(w, h);
 		changeScene = true;
 	}
 	
@@ -80,8 +79,8 @@ public class HeartMenu extends HeartApplication{
 			remove(creditsButton);
 			
 			return GUIEvent.APPLICATION_CHANGED;
-		}
-		
+			
+		}	
 				
 		return GUIEvent.NONE;
 	}

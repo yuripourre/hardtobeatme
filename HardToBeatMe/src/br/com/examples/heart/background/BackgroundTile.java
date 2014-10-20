@@ -3,12 +3,12 @@ package br.com.examples.heart.background;
 import java.awt.Color;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.layer.Layer;
 
-public class BackgroundTile extends Layer implements Drawable{
+public class BackgroundTile extends Layer implements Drawable {
 
-	public BackgroundTile(){
+	public BackgroundTile() {
 		super();
 	}
 	
