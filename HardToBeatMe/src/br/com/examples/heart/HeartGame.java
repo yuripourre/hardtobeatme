@@ -7,6 +7,7 @@ import java.util.Random;
 import sound.model.Music;
 import sound.model.Sound;
 import br.com.etyllica.context.Application;
+import br.com.etyllica.context.UpdateIntervalListener;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
@@ -23,7 +24,7 @@ import br.com.examples.heart.obstacle.Obstacle;
 import br.com.examples.heart.player.Player;
 import br.com.examples.heart.player.PlayerAction;
 
-public class HeartGame extends Application {
+public class HeartGame extends Application implements UpdateIntervalListener {
 	
 	private Sound beat1;
 	private Sound beat2;
@@ -162,13 +163,13 @@ public class HeartGame extends Application {
 
 		music.play();
 
-		updateAtFixedRate(35);
+		updateAtFixedRate(35, this);
 
 		loading = 100;
 	}
 
 	@Override
-	public void timeUpdate(long now){
+	public void timeUpdate(long now) {
 		
 		moveAll();
 				
